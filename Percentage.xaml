@@ -1,6 +1,6 @@
 <Activity mc:Ignorable="sap sap2010" x:Class="Percentage" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
-    <x:Property Name="out_result" Type="OutArgument(x:String)" />
+    <x:Property Name="out_result" Type="OutArgument(x:Int32)" />
     <x:Property Name="in_Number1" Type="InArgument(x:Int32)" />
     <x:Property Name="in_Number2" Type="InArgument(x:Int32)" />
   </x:Members>
@@ -80,10 +80,10 @@
       </sap:WorkflowViewStateService.ViewState>
       <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_1">
         <Assign.To>
-          <OutArgument x:TypeArguments="x:String">[out_result]</OutArgument>
+          <OutArgument x:TypeArguments="x:Int32">[out_result]</OutArgument>
         </Assign.To>
         <Assign.Value>
-          <InArgument x:TypeArguments="x:String">[((in_Number1/in_Number2)*100).ToString]</InArgument>
+          <InArgument x:TypeArguments="x:Int32">[Cint((in_Number1/in_Number2)*100)]</InArgument>
         </Assign.Value>
       </Assign>
     </Sequence>

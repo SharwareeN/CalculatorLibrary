@@ -76,7 +76,7 @@
         <OutArgument x:TypeArguments="x:Int32">[out_result]</OutArgument>
       </Assign.To>
       <Assign.Value>
-        <InArgument x:TypeArguments="x:Int32">[in_Number1+in_Number2]</InArgument>
+        <InArgument x:TypeArguments="x:Int32">[(in_Number1+in_Number2)]</InArgument>
       </Assign.Value>
     </Assign>
   </Sequence>
